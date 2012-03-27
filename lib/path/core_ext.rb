@@ -82,8 +82,8 @@ module Path::DataExt
   # Returns a hash of path/value pairs of deleted items.
   #
   #   data = {:foo => "bar", :foobar => [:a, :b, {:foo => "other bar"}, :c]}
-  #   data.replace_at_path "**=*bar", "BAR"
-  #   #=> {[:foo] => "bar", [:foobar, 2, :foo] => "other bar"}
+  #   data.delete_at_path "**=*bar"
+  #   #=> {:foobar => [:a, :b, {}, :c]}
 
   def delete_at_path path, limit=nil
     count = 0

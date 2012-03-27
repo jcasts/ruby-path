@@ -4,9 +4,11 @@ require 'rubygems'
 require 'hoe'
 
 Hoe.spec 'ruby-path' do
-  # developer('FIX', 'FIX@example.com')
+  developer('Jeremie Castagna', 'yaksnrainbows@gmail.com')
 
-  # self.rubyforge_name = 'ruby-pathx' # if different than 'ruby-path'
+  self.readme_file      = "README.rdoc"
+  self.history_file     = "History.rdoc"
+  self.extra_rdoc_files = FileList['*.rdoc']
 end
 
 # vim: syntax=ruby

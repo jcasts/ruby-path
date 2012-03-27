@@ -1,0 +1,8 @@
+.autotest
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+bin/ruby-path
+lib/ruby-path.rb
+test/test_ruby-path.rb

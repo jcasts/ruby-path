@@ -4,15 +4,56 @@
 
 == DESCRIPTION:
 
-Simple path-based lookup for Ruby.
+Simple path-based search and lookup for Ruby.
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* Search recursively through hashes and arrays.
+
+* Modify or delete found items in place.
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+=== Find Data
+
+  data = {:foo => "bar", :foobar => [:a, :b, {:foo => "other bar"}, :c]}
+  data.find_data "**/foo" do |parent, key, path|
+    p path
+    p parent[key]
+    puts "---"
+  end
+
+  # [:foo]
+  # "bar"
+  # ---
+  # [:foobar, 2, :foo]
+  # "other bar"
+  # ---
+
+=== Replace Data:
+
+  data = {:foo => "bar", :foobar => [:a, :b, {:foo => "other bar"}, :c]}
+  data.replace_at_path "**=*bar", "BAR"
+  #=> true
+
+  data
+  #=> {:foo => "BAR", :foobar => [:a, :b, {:foo => "BAR"}, :c]}
+
+=== Delete Data:
+
+  data = {:foo => "bar", :foobar => [:a, :b, {:foo => "other bar"}, :c]}
+  data.replace_at_path "**=*bar", "BAR"
+  #=> {[:foo] => "bar", [:foobar, 2, :foo] => "other bar"}
+
+=== Existance of Data:
+
+  data = {:foo => "bar", :foobar => [:a, :b, {:foo => "other bar"}, :c]}
+
+  data.has_path? "foobar/*/foo"
+  #=> true
+
+  data.has_path? "foobar/0/foo"
+  #=> false
 
 == INSTALL:
 

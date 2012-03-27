@@ -1,7 +1,14 @@
 .autotest
-History.txt
+History.rdoc
 Manifest.txt
-README.txt
+README.rdoc
 Rakefile
 lib/path.rb
+lib/path/core_ext.rb
+lib/path/match.rb
+lib/path/matcher.rb
+lib/path/transaction.rb
 test/test_path.rb
+test/test_core_ext.rb
+test/test_path_match.rb
+test/test_path_matcher.rb

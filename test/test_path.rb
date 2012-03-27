@@ -1,7 +1,6 @@
-require "test/unit"
-require "ruby/path"
+require "test/test_helper"
 
-class TestRuby::Path < Test::Unit::TestCase
+class Test::Path < Test::Unit::TestCase
   def setup
     @data = {
       :key1 => {

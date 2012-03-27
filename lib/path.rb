@@ -34,11 +34,6 @@
 class Path
   VERSION = '1.0.0'
 
-  require 'path/match'
-  require 'path/matcher'
-  require 'path/transaction'
-  require 'path/core_ext'
-
 
   # Used as path instruction to go up one path level.
   module PARENT; end
@@ -74,6 +69,13 @@ class Path
 
   # The key string that indicates recursive lookup.
   RECUR_KEY = "**"
+
+
+  require 'path/match'
+  require 'path/matcher'
+  require 'path/transaction'
+  require 'path/core_ext'
+
 
 
   ##

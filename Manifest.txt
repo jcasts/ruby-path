@@ -12,3 +12,4 @@ test/test_path.rb
 test/test_core_ext.rb
 test/test_path_match.rb
 test/test_path_matcher.rb
+test/test_path_transaction.rb

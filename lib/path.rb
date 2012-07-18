@@ -32,7 +32,7 @@
 #   Path.find "root/**=\\1..3", data
 
 class Path
-  VERSION = '1.0.1'
+  VERSION = '1.0.2'
 
 
   # Used as path instruction to go up one path level.

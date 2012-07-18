@@ -1,6 +1,6 @@
 = ruby-path
 
-* https://yaks.me/ruby-path
+* http://yaks.me/ruby-path
 
 == DESCRIPTION:
 

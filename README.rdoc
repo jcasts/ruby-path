@@ -1,6 +1,6 @@
 = ruby-path
 
-* https://github.com/yaksnrainbows/ruby-path
+* https://yaks.me/ruby-path
 
 == DESCRIPTION:
 
